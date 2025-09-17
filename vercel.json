@@ -1,4 +1,5 @@
 {
+  "name": "mindmaps-studio-app",
   "version": 2,
   "functions": {
     "back-end/server.js": {

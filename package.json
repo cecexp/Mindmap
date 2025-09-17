@@ -1,5 +1,5 @@
 {
-  "name": "mindmaps-app",
+  "name": "mindmaps-studio-app",
   "version": "1.0.0",
   "description": "Full-stack Mind Maps application with React frontend and Node.js backend",
   "private": true,
