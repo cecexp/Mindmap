@@ -1,0 +1,25 @@
+{
+  "name": "mindmaps-app",
+  "version": "1.0.0",
+  "description": "Full-stack Mind Maps application with React frontend and Node.js backend",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd back-end && npm run dev\" \"cd front-end && npm start\"",
+    "build": "cd front-end && npm run build",
+    "start": "cd back-end && npm start",
+    "install-all": "cd back-end && npm install && cd ../front-end && npm install",
+    "vercel-build": "cd front-end && npm install && npm run build"
+  },
+  "workspaces": [
+    "front-end",
+    "back-end"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
