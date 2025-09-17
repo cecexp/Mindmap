@@ -1,27 +1,8 @@
 {
-  "name": "mindmaps-studio-app",
   "version": 2,
-  "builds": [
-    {
-      "src": "front-end/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/front-end/build/static/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg)$)",
-      "dest": "/front-end/build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/front-end/build/index.html"
-    }
-  ]
+  "buildCommand": "cd front-end && npm install && npm run build",
+  "outputDirectory": "front-end/build",
+  "installCommand": "npm install --prefix front-end",
+  "devCommand": "cd front-end && npm start",
+  "framework": "create-react-app"
 }
