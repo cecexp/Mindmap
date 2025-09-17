@@ -1,19 +1,9 @@
 {
   "name": "mindmaps-studio-app",
   "version": 2,
-  "builds": [
-    {
-      "src": "front-end/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    },
-    {
-      "src": "back-end/server.js",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "front-end/build",
+  "installCommand": "npm install",
   "routes": [
     {
       "src": "/api/(.*)",
