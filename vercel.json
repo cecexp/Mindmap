@@ -1,11 +1,6 @@
 {
   "name": "mindmaps-studio-app",
   "version": 2,
-  "functions": {
-    "back-end/server.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "builds": [
     {
       "src": "front-end/package.json",
@@ -13,6 +8,10 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "back-end/server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
